@@ -13,7 +13,7 @@ const searchHero = (req, res) => {
     const url = `https://superheroapi.com/api/${access_Token}/search/${value}`;
     fetch(url)
         .then(resp => resp.json())
-        .then(data => res.send(data.results.filter(hero => hero.name.toLowerCase().includes(value.toLowerCase()))))
+        .then(data => res.send(data.results ? data.results.filter(hero => hero.name.toLowerCase().includes(value.toLowerCase())) : []))
         .catch(err => { throw new Error(err) })
 }
 
