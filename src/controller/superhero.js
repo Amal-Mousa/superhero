@@ -29,7 +29,6 @@ const searchHero = (req, res) => {
                 is because the data is undefined, so we need to check if the data is undefined
                 if it is undefined we will send an empty array
             */
-
             // Using optional chaining: object?.property?.property ...etc
             // res.send(data?.results?.filter(hero => hero.name.toLowerCase().includes(value.toLowerCase())) || []);
             
